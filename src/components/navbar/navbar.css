@@ -1,0 +1,22 @@
+.navbar {
+  background-color: #191c3c;
+}
+.navbarError {
+  background-color: white;
+}
+
+.logo{
+    width: auto;
+}
+
+.shop{
+    font-size: 12px;
+    color:white;
+    margin: 0;
+}
+
+.shopError{
+  font-size: 12px;
+  color:black;
+  margin: 0;
+}

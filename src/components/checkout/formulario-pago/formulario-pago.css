@@ -1,0 +1,21 @@
+.title-form {
+    font-size: 15px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    color: #121212;
+}
+
+.title-form a{
+    color: #8f2df5;
+    text-decoration: none;    
+}
+
+.form-label{
+    font-size: 12px;
+}
+
+.tarjeta{
+    position: absolute;
+    width: 50px;
+}
