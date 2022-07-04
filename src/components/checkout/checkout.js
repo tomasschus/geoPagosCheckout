@@ -34,12 +34,12 @@ export default function Checkout(props) {
           Completá los datos datos para pagar
         </h4>
         <div className="pt-3">
-          <div className="border border-1 rounded">
+          <div className="border border-1 rounded pb-3">
             <div className="pt-2 px-3 d-flex justify-content-between ">
-              <p className="name-total-compra font-bbva ">Total</p>
-              <p className="total-compra font-bbva">
+              <p className="name-total-compra font-bbva">Total</p>
+              <p className="total-compra font-roboto">
                 {currency_symbol}
-                {total_price.toFixed(2)}
+                {cuota===null? total_price.toFixed(2): installments[cuota].total.toFixed(2)}
               </p>
             </div>
             {items.map((item) => {

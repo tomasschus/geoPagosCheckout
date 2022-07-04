@@ -1,8 +1,9 @@
-button{
-    cursor: pointer;
+button {
+  cursor: pointer;
 }
 
 .name-total-compra {
+  margin: 0;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -10,78 +11,79 @@ button{
 }
 
 .total-compra {
-    font-weight: 600;
+  margin: 0;
+  font-weight: 600;
   font-size: 25px;
   color: #8f2df5;
 }
 
 .items-compra {
+  margin: 0.1em;
   font-style: normal;
   font-weight: 600;
   font-size: 17px;
   color: #585858;
 }
 
-
-.font-bbva{
-    font-family: "BBVA Benton Sans"; 
+.font-bbva {
+  font-family: "BentonSans", sans-serif;
 }
 
-.font-roboto{
-    font-family: "Roboto";
+.font-roboto {
+  font-family: "Roboto", sans-serif;
 }
 
-input{
-    font-family: Roboto !important;
-    font-size: 20px !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    outline: 0 !important;
-    border-bottom: 1px solid #BDBDBD !important;
+input {
+  font-family: Roboto !important;
+  font-size: 20px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  border-bottom: 1px solid #bdbdbd !important;
 }
 
-label{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    color: #585858;
+label {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #585858;
 }
 
-.ls-elevation button{
-    width: 100%;
-    height: 60px;   
-    font-size: 19px;
-    background-color: #8F2DF5;
-    border: #BDBDBD;
-    border-radius: 26px;
-    color: white;
+.ls-elevation button {
+  width: 100%;
+  height: 60px;
+  font-size: 19px;
+  background-color: #8f2df5;
+  border: #bdbdbd;
+  border-radius: 26px;
+  color: white;
 }
 
-.encript{
-    color:#999999 ;
+.encript {
+  color: #999999;
 }
 .encript p {
-    color:#999999 !important;
-    font-size: 12px;   
-    margin: 0;
+  color: #999999 !important;
+  font-size: 12px;
+  margin: 0;
 }
 
-h4{
-    font-size: 22px;
+h4 {
+  font-size: 22px;
 }
 
-.loadingSpinner{
-	display: flex; 
-	justify-content: center;	
-	align-items: center;
-	background: rgba(255, 255, 255, 0.6);
-	position: absolute;
-	width:100%;
-	height: 100%;
-	z-index: 1;
+.loadingSpinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
-.ls-elevation{
-    position: relative;
+.ls-elevation {
+  position: relative;
 }

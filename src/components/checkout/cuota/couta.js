@@ -20,10 +20,10 @@ export default function Cuota(props) {
               className="form-check-label pt-2 fs-6"
               htmlFor={"flexRadio-"+index}
             >
-              {installment} coutas de ${installmentPrice}
+              {installment} cuotas de ${installmentPrice}
             </label>
             <label
-              className="form-check-label pb-2 fs-6 fw-light"
+              className="form-check-label pb-2 fs-6 cf"
               htmlFor={"flexRadio-"+index}
             >
               CF: {financialRate}%
