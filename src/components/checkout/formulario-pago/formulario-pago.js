@@ -60,6 +60,7 @@ export default function FormularioPago(params) {
               mask="9999 9999 9999 9999"
               name="Numero"
               maskChar=" "
+              type="tel"
             ></ReactInputMask>
           </div>
         </div>
