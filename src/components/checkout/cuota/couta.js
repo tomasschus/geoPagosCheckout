@@ -26,7 +26,7 @@ export default function Cuota(props) {
               className="form-check-label pb-2 fs-6 cf"
               htmlFor={"flexRadio-"+index}
             >
-              CF: {financialRate}%
+              CF: {financialRate.toString().replace(".",",")}%
             </label>
           </div>
         </div>
