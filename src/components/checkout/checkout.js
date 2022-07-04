@@ -14,9 +14,18 @@ export default function Checkout(props) {
     total_price,
   } = props;
 
+
+  const [dataFormulario, setDataFormulario] = useState({
+    dni: "",
+    num: "",
+    exp: "",
+    nombre: "",
+    cod: "",
+  });
   const [isFormularioPagoCompleted, setIsFormularioPagoCompleted] = useState(false);
-  const [cuota, setCuota] =  useState(null);
-  const [emailPersonal, setEmailPersonal] =  useState("");
+  const [cuota, setCuota] = useState(null);
+  const [emailPersonal, setEmailPersonal] = useState("");
+  const [loading, setLoading] = useState(null);
 
   return (
     <>
@@ -54,6 +63,8 @@ export default function Checkout(props) {
 
         <div className="container mt-5">
           <FormularioPago
+            dataFormulario={dataFormulario}
+            setDataFormulario={setDataFormulario}
             setIsFormularioPagoCompleted={setIsFormularioPagoCompleted}
           />
         </div>
@@ -61,9 +72,9 @@ export default function Checkout(props) {
         <div>
           <h4 className="mt-5 font-roboto fw-bold">Cuotas</h4>
           <div>
-            {installments.map((i,index) => {
+            {installments.map((i, index) => {
               return (
-                <div key={"couta-"+index} >
+                <div key={"couta-" + index}>
                   <Cuota
                     setCuota={setCuota}
                     index={index}
@@ -87,7 +98,9 @@ export default function Checkout(props) {
               id="email-input"
               placeholder="E-mail"
               value={emailPersonal}
-              onChange={(e)=>{setEmailPersonal(e.target.value)}}
+              onChange={(e) => {
+                setEmailPersonal(e.target.value);
+              }}
             ></input>
             <label htmlFor="email-input" className="form-label ">
               A este email te enviaremos el recibo de compra
@@ -95,12 +108,25 @@ export default function Checkout(props) {
           </div>
         </div>
 
-        <div className="continuar" >
-          <button
-           onClick={()=>{
-            setTimeout(()=>{setCheckoutError(true);},2000)
-           }}
-           > Continuar </button>
+        <div>
+          <div class="ls-elevation">
+            { loading?  <div class="loadingSpinner">
+              <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>: <></>}
+            <button
+              onClick={() => {
+                setLoading(true)
+                setTimeout(() => {
+                  console.log(isFormularioPagoCompleted, dataFormulario, cuota, emailPersonal)
+                  setCheckoutError(true);
+                }, 2500);
+              }}
+            >
+              Continuar
+            </button>
+          </div>
         </div>
 
         <div className="d-flex align-items-center justify-content-center my-3 encript">

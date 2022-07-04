@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "./formulario-pago.css";
 import ReactInputMask from "react-input-mask";
 import tarjetaVacia from "../../../assets/img/tarjeta-vacia.jpg";
 import tarjetaVisa from "../../../assets/img/tarjeta-visa.jpg";
 
 export default function FormularioPago(params) {
-  const { setIsFormularioPagoCompleted } = params;
+  const { 
+    setIsFormularioPagoCompleted, 
+    dataFormulario, 
+    setDataFormulario } = params;
 
   const checkFormularioCompleted = () => {
     let completed = true;
@@ -17,14 +20,6 @@ export default function FormularioPago(params) {
     });
     setIsFormularioPagoCompleted(completed);
   };
-
-  const [dataFormulario, setDataFormulario] = useState({
-    dni: "",
-    num: "",
-    exp: "",
-    nombre: "",
-    cod: "",
-  });
 
   return (
     <>
@@ -39,7 +34,19 @@ export default function FormularioPago(params) {
           </label>
           <div>
             <div className="d-flex justify-content-end">
-              {dataFormulario.num.trim()===""? <img alt="vacio" className="tarjeta rounded" src={tarjetaVacia}></img> : <img alt="visa" className="tarjeta rounded" src={tarjetaVisa}></img>}
+              {dataFormulario.num.trim() === "" ? (
+                <img
+                  alt="vacio"
+                  className="tarjeta rounded"
+                  src={tarjetaVacia}
+                ></img>
+              ) : (
+                <img
+                  alt="visa"
+                  className="tarjeta rounded"
+                  src={tarjetaVisa}
+                ></img>
+              )}
             </div>
             <ReactInputMask
               className="w-100"
